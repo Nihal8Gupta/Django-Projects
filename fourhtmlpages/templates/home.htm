@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+        <link rel="stylesheet" href="../../font/css/all.css">
+        <link rel="shortcut icon" href="ng1.jpg" type="image/x-icon"/>
+        <style> body{ background: url(logo1.jpg) scroll;
+                     background-size:cover;}
+                     .d{ height: 100vh;
+                         opacity: 0.5;}
+                h1,p{color:black;}
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a href="#" class="navbar-brand mdb-color-text">NG! CAFE</a>
+           <button class="navbar-toggler" data-toggle="collapse" data-target="#mylink">
+            <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="mylink">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#" class="nav-link"> Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Courses</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="btn btn-outline-unique" data-target="#log" data-toggle="modal">Login</button>
+            <button class="btn btn-outline-unique" data-target="#frm" data-toggle="modal">Register</button>
+           </div>
+           <div class="modal" id="log">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header blue-gradient-rgba"> Login here:</div>
+                    <div class="modal-body">
+                        <form action="post">
+                            <div class="form-group">
+                                <label for="Username">Username/Number:</label><br>
+                                <input type="text,number" placeholder="Enter email/number" >
+                            </div><hr>
+                            <div class="form-group">
+                                <label for="password">Password:</label><br>
+                                <input type="password" placeholder="Enter password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer blue-gradient-rgba">
+                        <button type="submit" class="btn btn-outline-unique">submit</button>
+                    </div>
+                </div>
+            </div>
+           </div>
+          
+           <div class="modal" id="frm">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                        <div class="modal-header blue-gradient-rgba"> 
+                          Register here
+                          <button type="button" class="close"  data-dismiss="modal">&times</button>
+                        </div>
+                        <div class="modal-body bg-light">
+                            <form>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAddress">Address</label>
+                                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAddress2">Address 2</label>
+                                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Choose...</option>
+                                      <option>UP</option>
+                                      <option>AP</option>
+                                      
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-md-2">
+                                    <label for="inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                      Check me out
+                                    </label>
+                                  </div>
+                                </div>
+                               
+                              </form>
+                        </div>
+                        <div class="modal-footer blue-gradient-rgba"> <button type="submit" class="btn btn-outline-unique">Sign in</button></div>
+                </div>
+            </div>
+           </div>
+        </nav>
+    <div class="d-flex justify-content-center align-items-center flex-column bg-warning d" ><h1>India's Best Cafe</h1>
+         <p>The World’s 50 Best Restaurants list first appeared as a feature in the British magazine Restaurant in 2002. Shortly afterwards, an awards night was established to celebrate the release of the list that soon became a major event in the culinary world.[7] The results are now published via the World’s 50 Best Restaurants social media channels and on the World’s 50 Best Restaurants website on the awards night.</p>  
+        </div>
+        <div class="container-fluid d-flex justify-content-around" >
+           
+            <div class="card bg-info" style="width:18rem;">
+                <img class="card-img-top" src="realme9.jpg" alt="no"/>
+                <div class="card-body">
+                <ul><li>Brand:Realmel</li>
+                     <li>Price:14,999</li></ul></div>
+            </div>
+            <div class="card bg-info" style="width:18rem;">
+                <img class="card-img-top" src="samsungf.jpg" alt="no"/>
+                <div class="card-body">
+                <ul><li>Brand:Samsung</li>
+                     <li>Price:79,999</li></ul></div>
+                    </div>
+
+                     <div class="card bg-info" style="width:18rem;">
+                        <img class="card-img-top" src="iphone.jpg" alt="no"/>
+                        <div class="card-body">
+                        <ul><li>Brand:iphone 12</li>
+                             <li>Price:99,999</li></ul></div>
+                             </div>
+                             <div class="card bg-info" style="width:18rem;">
+                                <img class="card-img-top" src="realme9.jpg" alt="no"/>
+                                <div class="card-body">
+                                <ul><li>Brand:Realmel</li>
+                                     <li>Price:14,999</li></ul></div>        
+        </div>
+    </div>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+        </body>
+</html>
