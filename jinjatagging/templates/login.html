@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{background-color: darkgray;}
+        table{margin-top: 50px;}
+        td{text-align: center;
+            padding-right:50px;
+            padding-left:50px ;
+        background-color:cornflowerblue;}
+        th{background-color: aqua;
+        padding: 20px;}
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Data getting from BE to FE </h1>
+    <table border="1" cellpadding="10px">
+        <tr>
+            <th>Sr.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+        {% for d in infolist %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{d.name}}</td>
+            <td>{{d.age}}</td>
+            <td>{{d.course}}</td>
+        </tr>
+        {% endfor %}
+    </table></center>
+    <h1>Conditional Statements:</h1>
+    <h2>
+    <li><a href="page1">if</a></li>
+    <li><a href="page2">if else</a></li>
+    <li><a href="page3">elif</a></li>
+    <li><a href="page4">Nested if</a></li>
+    </h2>
+    
+</body>
+</html>
