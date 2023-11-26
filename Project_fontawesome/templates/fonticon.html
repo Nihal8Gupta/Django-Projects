@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/my.css' %}">
+</head>
+<body>
+    <center>
+        <h1>:-Fontawesome-:</h1>
+        <li>
+            <h3>First you have to Install fontawesomefree module in your system.</h3>
+        <h4>Syntax-: pip install fontawesomefree</h4>
+        </li>
+        <li>
+            <h3>You have to register fontawesomefree module in INSTALLED_APPS </h3>
+            <h4>INSTALLED_APPS = [
+                'fontawesomefree'
+              ]</h4>
+        </li>
+        <li>
+            <h3>After that you have to link this file into your html file within head tag</h3>
+            <h4>
+                
+               <span><</span> link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css"<span>></span>
+              </h4>
+        </li>
+        <li>
+            <h3>Syntax of using font icon in html body is given below  </h3>
+            <h4><<span>i</span> class="fa fa-home">Home <span>< /</span> <span>i></span> </h4>
+            <b>it will look like this-:</b>
+            <h4><i class="fa fa-home"> Home</i></h4>
+        </li>
+       
+        
+    </center>
+    
+</body>
+</html>
