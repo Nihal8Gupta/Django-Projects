@@ -1,0 +1,21 @@
+form{
+    width: 320px;
+    height: 400px;
+    margin:auto;
+   margin-top: 50px;
+   
+}
+.btn{background-color: aqua;}
+form>h3{
+    text-align: center;
+   margin: 20px;
+   color: aqua;
+
+}
+
+label{
+    color: whitesmoke;
+}
+body{
+    background-color: black;
+}
