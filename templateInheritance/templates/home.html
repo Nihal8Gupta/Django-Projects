@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Home</title>
+    {% endblock %}
+    <style>
+        
+        body{background-image: linear-gradient(to left,aqua,pink);}
+        div{margin-left: 480px;
+        margin-top: 160px;}
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Come fast</h1>
+    {% block block-body %}
+    <h1>Welcome to Our Company</h1> 
+    {% endblock %}
+    
+    <h2>Web Site Main Ingredients:</h2>
+
+    <p>Pages (HTML)</p>
+
+    {% block body-content %}
+    <p>Style Sheets (CSS)</p>
+    {% endblock%}
+
+    <p>Computer Code (JavaScript)</p>
+
+    <p>Live Data (Files and Databases)</p>
+    </div>
+</body>
+</html>
