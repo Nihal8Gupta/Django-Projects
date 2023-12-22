@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE-To-FE</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> 
+    <style>
+        table{text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="alert alert-primary text-center"><b>Employee List</b></div>
+    <table class="table table-hover table-info">
+        <tr>
+        <th>Sr.</th>
+        <th>EMP_Id</th>
+        <th>EMP_Name</th>
+        <th>DEPT_No</th>
+        <th>LOC</th>
+        </tr>
+        {% for emp in EMP %}
+          <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{emp.EMP_Id}}</td>
+            <td>{{emp.EMP_Name}}</td>
+            <td>{{emp.DEPT_No.DEPT_No}}</td>
+            <td>{{emp.LOC}}</td>
+          </tr>
+        {% endfor %}
+    </table>
+
+    <div class="alert alert-danger text-center"><b>DEPT List</b></div>
+    <table class="table table-hover table-secondary">
+        <tr>
+          <th>Sr.</th>
+        <th>DEPT_Name</th>
+        <th>DEPT_No</th>
+        <th>LOC</th>
+        </tr>
+        {% for dept in DEPT %}
+          <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{dept.DEPT_Name}}</td>
+            <td>{{dept.DEPT_No}}</td>
+            <td>{{dept.LOC}}</td>
+          </tr>
+        {% endfor %}
+
+    </table>
+
+    <div class="alert alert-success text-center"><b>Capital</b></div>
+        <table class="table table-hover table-warning">
+        <tr>
+          <th>pk</th>
+        <th>Capital_name List</th>
+        
+        </tr>
+        {% for capital in Capital %}
+          <tr>
+            <td>{{capital.pk}}</td>
+            <td>{{capital.Capital_name}}</td>
+          </tr>
+        {% endfor %}
+        </table>
+
+        <div class="alert alert-dark text-center"><b>Country_name List</b></div>
+        <table class="table table-hover table-dark">
+        <tr>
+          <th>pk</th>
+        <th>Country_Name</th>
+        <th>Capital_name</th>
+        </tr>
+        {% for country in Country %}
+          <tr>
+            <td>{{country.pk}}</td>
+            <td>{{country.Country_Name}}</td>
+            <td>{{country.Capital_name}}</td>
+          </tr>
+        {% endfor %}
+        </table>
+</body>
+</html>
