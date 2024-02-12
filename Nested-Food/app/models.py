@@ -56,8 +56,14 @@ class Dish(models.Model):
     def __str__(self):
         return self.name
     class Meta:
-        
         verbose_name_plural = 'Dish Table'
+
+class Dish_cart(models.Model):
+    name = models.ForeignKey(Dish,on_delete=models.CASCADE)
+    counter = models.PositiveIntegerField(default=0)
+    ammount = models.PositiveBigIntegerField(null=True)
+    def __str__(self):
+        return self.name.name
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

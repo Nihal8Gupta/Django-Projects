@@ -32,6 +32,11 @@ urlpatterns = [
     path('team/',team,name='team'),
     path('register/',register,name='register'),
     path('login/',signin,name='login'),
+    path('cart/<int:id>',cart,name='cart'),
+    path('cart/',cartall,name='cart'),
     path('dish/<int:id>',dish,name='dish'),
+    path('qntyadd/<int:id>',qntyadd,name='qntyadd'),
+    path('qntysub/<int:id>',qntysub,name='qntysub'),
+    path('logout/',logout_user,name='logout'),
     
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

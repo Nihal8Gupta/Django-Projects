@@ -18,8 +18,8 @@
                                 Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn custom-btn" href="">View Menu</a>
-                                <a class="btn custom-btn" href="">Book Table</a>
+                                <a class="btn custom-btn" href="{% url 'menu' %}">View Menu</a>
+                                <a class="btn custom-btn" href="#">Book Table</a>
                             </div>
                         </div>
                     </div>
@@ -33,8 +33,8 @@
                                 Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn custom-btn" href="">View Menu</a>
-                                <a class="btn custom-btn" href="">Book Table</a>
+                                <a class="btn custom-btn" href="{% url 'menu' %}">View Menu</a>
+                                <a class="btn custom-btn" href="#">Book Table</a>
                             </div>
                         </div>
                     </div>
@@ -48,8 +48,8 @@
                                 Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn custom-btn" href="">View Menu</a>
-                                <a class="btn custom-btn" href="">Book Table</a>
+                                <a class="btn custom-btn" href="{% url 'menu' %}">View Menu</a>
+                                <a class="btn custom-btn" href="#">Book Table</a>
                             </div>
                         </div>
                     </div>
@@ -124,18 +124,12 @@
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group">
-                                        <select class="custom-select form-control">
+                                        <select class="custom-select form-control bg-warning">
                                             <option selected>Guest</option>
-                                            <option value="1">1 Guest</option>
-                                            <option value="2">2 Guest</option>
-                                            <option value="3">3 Guest</option>
-                                            <option value="4">4 Guest</option>
-                                            <option value="5">5 Guest</option>
-                                            <option value="6">6 Guest</option>
-                                            <option value="7">7 Guest</option>
-                                            <option value="8">8 Guest</option>
-                                            <option value="9">9 Guest</option>
-                                            <option value="10">10 Guest</option>
+                                            {% for g in All %}
+                                            <option value="{{forloop.counter}}"> {{g.first_name}}</option>
+                                            {% endfor %}
+                                            
                                         </select>
                                         <div class="input-group-append">
                                             <div class="input-group-text"><i class="fa fa-chevron-down"></i></div>

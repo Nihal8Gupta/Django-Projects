@@ -14,7 +14,10 @@ class TeamAdmin(admin.ModelAdmin):
     list_display = ['id','name','added_on','updated_on']
 
 class DishAdmin(admin.ModelAdmin):
-    list_display = ['id','name','price','added_on','updated_on']
+    list_display = ['id','name','price','discount_price','added_on','updated_on']
+@admin.register(Dish_cart)
+class DishCartAdmin(admin.ModelAdmin):
+    list_display = ['id','name','counter','ammount']
 
 admin.site.register(Contact,ContactAdmin)
 admin.site.register(Category,CategoryAdmin)
