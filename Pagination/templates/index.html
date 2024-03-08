@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginator</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <table class="table table-hover table-primary">
+        <thead class="table-dark">
+            <th>Sr.</th>
+            <th>School Name</th>
+            <th>School Address</th>
+            <th>School Code</th>
+        </thead>
+        {% for s in All %}
+
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{s.Sname}}</td>
+            <td>{{s.Saddress}}</td>
+            <td>{{s.Scode}}</td>
+        </tr>
+        {% endfor %}
+
+        
+
+    </table>
+    <nav aria-label="..." style="margin-left: 38%;">
+        <ul class="pagination ">
+            {% if All.has_previous %}
+            <li class="page-item ">
+                <a class="page-link" href="/?page=1" tabindex="-1">First</a>
+            </li>
+            <li class="page-item ">
+                <a class="page-link" href="/?page={{All.previous_page_number}}" tabindex="-1">Previous</a>
+            </li>
+            {% endif %}
+            
+            {% for n in totalpage %}
+            <li class="page-item"><a class="page-link" href="/?page={{n}}" id="{{n}}">{{n}}</a></li>
+            {% endfor %}
+            
+            {% if All.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="/?page={{All.next_page_number}}">Next</a>
+            </li>  
+            <li class="page-item ">
+                <a class="page-link" href="/?page={{last}}" tabindex="-1">Last</a>
+            </li>            
+            {% endif %}
+        </ul>
+      </nav>
+
+    <script>
+        console.log(window.location.href)
+        console.log(window.location.search)
+
+        let pageno = window.location.search
+        let page = pageno.match(/(\d+)/)[0]
+        var a = document.getElementById(`${page}`)
+        a.classList.add('active')
+        
+    </script>
+</body>
+</html>
